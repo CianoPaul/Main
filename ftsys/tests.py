@@ -10,6 +10,10 @@ class HomePageTest(TestCase):
 	def test_mainpage_as_seen_client(self):
 	   response=self.client.get('/')
 	   self.assertTemplateUsed(response,'mainpage.html')
+	   
+	def test_responding_post_request(self):
+	   response = self.client.post('/', data={'fitness1':'NewSurname'})
+	   self.assertIn('NewSurname',response.content.decode())
 	"""
 	def test_mainpage_responding_view(self):
 	   response=self.client.get('/')
