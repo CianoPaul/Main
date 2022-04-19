@@ -1,3 +1,12 @@
 from django.db import models
 
-# Create your models here.
+class Item(models.Model):
+	text = models.TextField(default="")
+	idno = models.TextField(default="")
+	fname = models.TextField(default="")
+	mname = models.TextField(default="")
+	sname = models.TextField(default="")
+	bdate = models.TextField(default="")
+	address = models.TextField(default="")
+	contactno = models.TextField(default="")
+	status = models.TextField(default="pending")
